@@ -13,8 +13,8 @@ const serveFile = (filePath, res) => {
       res.writeHead(200, { "Content-Type": "text/html" });
       res.end(content, "utf-8");
     }
-  })
-}
+  });
+};
 
 const server = http.createServer((req, res) => {
   let filePath;
@@ -40,4 +40,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
-})
+});
